@@ -1,0 +1,13 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+a{
+    
+    text-decoration: none;
+    border: 1px solid rgb(51, 153, 102);
+    background-color: green;
+    color: aliceblue;
+    border-radius: 6px;
+    padding: 5px;
+}

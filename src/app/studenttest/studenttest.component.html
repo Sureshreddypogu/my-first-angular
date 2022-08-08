@@ -1,0 +1,48 @@
+Welcome to Student details
+
+<table>
+  <tr>
+    <td>id</td>
+    <td>Name</td>
+    <td>English</td>
+    <td>Telugu</td>
+    <td>Maths</td>
+    <td>Physics</td>
+    <td>Chemistry</td>
+    <td>Social</td>
+    <td>Total</td>
+    <td>Pass/Fail</td>
+    <td>Percentage</td>
+    <td>Grade</td>
+    <td>DOB</td>
+    <td>Mobile Number</td>
+    <td>Address</td>
+    <td>City</td>
+
+
+  </tr>
+
+  <tr *ngFor="let student of studentDetails">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.English}}</td>
+    <td>{{student.Telugu}}</td>
+    <td>{{student.Maths}}</td>
+    <td>{{student.Physics}}</td>
+    <td>{{student.Chemistry}}</td>
+    <td>{{student.Social}}</td>
+    <td>{{student.total}}</td>
+    <td>{{student.pass_fail}}</td>
+    <td>{{student.per}}%</td>
+    <td>{{student.grade}}</td>
+    <td>{{student.dob}}</td>
+
+    <!-- <td *ngIf="student.marks>=35">Pass</td>
+    <td *ngIf="student.marks<35">Fail</td>
+  </tr> -->
+  
+</table>
+
+
+<h4>Total Pass: {{total_pass}}</h4>
+<h4>Total Fail: {{studentDetails.length-total_pass}}</h4>
