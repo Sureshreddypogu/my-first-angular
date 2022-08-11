@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input[type="button"]{
+	border: none;
+	padding: 20px;
+	background-color: #7b7bdd;
+	color: #fff;
+	border-radius: 10px;
+}
+input[type="text"]{
+	border: 1px solid #e5dbdb;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    background-color: #e5dbdb;
+	font-size: 40px;
+	border-radius: 10px;
+}
+table{
+	margin: auto;
+    border: 10px solid #cf1010;
+    margin-top: 100px;
+    border-radius: 15px;
+}
+.equal{
+	padding-top: 110px;
+	padding-bottom: 110px;
+	background-color: #f77d4f !important;
+}
