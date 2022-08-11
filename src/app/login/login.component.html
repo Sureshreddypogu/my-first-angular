@@ -1,1 +1,21 @@
-<p>login works!</p>
+
+<form [formGroup]="LoginForm" class="login">
+    <h1>Login Form</h1>
+        <div>
+            <span class="text-danger"><label for="username" >Username : </label></span>
+            <input type="text" id="usr" placeholder="username " formControlName="usr">
+            <div *ngIf="f.usr.errors">
+                <div *ngIf="f.usr.errors.required && submitted" [ngClass]="{'text-danger': true}" class="red">username s required</div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <label for="password">Password : </label>
+            <input type="password" id="pwd" placeholder="password " formControlName="pwd">
+            <div *ngIf="f.pwd.errors.required && submitted" [ngClass]="{'text-danger': true}" class="red">passwords s required</div>
+        </div><br><br>
+        <div>
+            <button (click)="onSubmit()">Login</button>&nbsp;&nbsp;&nbsp;
+            <button type="submit" >Registor</button>
+        </div>
+    </form>

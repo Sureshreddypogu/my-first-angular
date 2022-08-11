@@ -1,6 +1,7 @@
 div{
     display: flex;
     justify-content: center;
+    padding: 50px;
 }
 a{
     
@@ -9,5 +10,5 @@ a{
     background-color: green;
     color: aliceblue;
     border-radius: 6px;
-    padding: 5px;
+    padding: 10px 20px;
 }
