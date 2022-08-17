@@ -1,9 +1,23 @@
 
-<div>
-  <a href="/table">Table</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="/login">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="/registration">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="/studenttest">Student</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="/calculator">Calculator</a>
-</div>
-  <router-outlet></router-outlet>
+
+<nav class="navbar navbar-light bg-light  p-3 mb-2 " >
+  <form class="container-fluid d-flex justify-content-center">
+    <button class="btn btn-sm btn-outline-success me-2" type="button">
+      <a routerLink="/table" class="text-decoration-none text-black">Table</a>
+    </button>
+    <button class="btn btn-sm btn-outline-success me-2" type="button">
+      <a routerLink="/login" class="text-decoration-none text-black">Login</a>
+    </button>
+    <button class="btn btn-sm btn-outline-success me-2" type="button">
+      <a routerLink="/registration" class="text-decoration-none text-black">Registration</a>
+    </button>
+    <button class="btn btn-sm btn-outline-success me-2" type="button">
+      <a routerLink="/studenttest" class="text-decoration-none text-black">Student</a>
+    </button>
+    <button class="btn btn-sm btn-outline-success me-2" type="button">
+      <a routerLink="/calculator" class="text-decoration-none text-black">Calculator</a>
+    </button>
+  </form>
+</nav>
+
+<router-outlet></router-outlet>

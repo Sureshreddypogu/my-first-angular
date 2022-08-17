@@ -1,21 +1,33 @@
 
-<form [formGroup]="LoginForm" class="login">
-    <h1>Login Form</h1>
-        <div>
-            <span class="text-danger"><label for="username" >Username : </label></span>
-            <input type="text" id="usr" placeholder="username " formControlName="usr">
-            <div *ngIf="f.usr.errors">
-                <div *ngIf="f.usr.errors.required && submitted" [ngClass]="{'text-danger': true}" class="red">username s required</div>
+
+<div class="row justify-content-center">
+  <div class="col-sm-5">  
+  <div class="card mx-5 my-5">
+    <h1 class="card-header text-center bg-success text-white">Login Form</h1>
+    <div class="card-body p-5 bg-light">
+      <form [formGroup]="LoginForm" class="login" (ngSubmit)="onSubmit()">
+        <div class="form-outline p-2"> 
+            <div>
+              <span ><label for="username" >Email : </label></span>
+              <input type="email" id="usr" placeholder="username " formControlName="usr" class="form-control"  [ngClass]="{'is-invalid' : f.usr.errors && submitted}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              <div *ngIf="f.usr.errors" class="invalid-feedback">
+              <div *ngIf="f.usr.errors.required && submitted" [ngClass]="{'text-danger': true}" class="text-danger">*Email s required</div>
+              </div>
             </div>
         </div>
-        <br><br>
-        <div>
-            <label for="password">Password : </label>
-            <input type="password" id="pwd" placeholder="password " formControlName="pwd">
-            <div *ngIf="f.pwd.errors.required && submitted" [ngClass]="{'text-danger': true}" class="red">passwords s required</div>
-        </div><br><br>
-        <div>
-            <button (click)="onSubmit()">Login</button>&nbsp;&nbsp;&nbsp;
-            <button type="submit" >Registor</button>
+        <div class="form-outline p-2">
+          <label for="password">Password : </label>
+          <input type="password" id="pwd" placeholder="password " formControlName="pwd" class="form-control" [ngClass]="{'is-invalid' : f.pwd.errors && submitted}">
+          <div *ngIf="f.usr.errors" class="invalid-feedback">
+            <div *ngIf="f.pwd.errors.required && submitted" [ngClass]="{'text-danger': true}" class="text-danger">*passwords s required</div>
+          </div>
+          </div>          
+        <div class="m-3">
+          <button type="submit" class="btn btn-primary pl-5 pr-5" (click)="onSubmit()">Login</button>
         </div>
     </form>
+        
+    </div>
+    <div>
+  </div>
+</div>

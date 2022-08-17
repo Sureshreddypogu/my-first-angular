@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { StudenttestComponent } from './studenttest/studenttest.component';
 import { JavasComponent } from './javas/javas.component';
+import { ListofemployeesComponent } from './listofemployees/listofemployees.component';
+import { ParentCompComponent } from './parent-comp/parent-comp.component';
+import { ChildCompComponent } from './child-comp/child-comp.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { JavasComponent } from './javas/javas.component';
     LoginComponent,
     RegistrationComponent,
     StudenttestComponent,
-    JavasComponent
+    JavasComponent,
+    ListofemployeesComponent,
+    ParentCompComponent,
+    ChildCompComponent
   ],
   imports: [
     BrowserModule,

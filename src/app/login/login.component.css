@@ -1,4 +1,37 @@
 
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .main-head{
+    width: 300px;
+    margin: auto;
+    height: auto;
+} */
+
+
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .signin-content {
+    padding: 60px 1rem;
+  }
+  .full-width-input {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+/* 
 .login{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     border: rgb(13, 231, 122);
@@ -28,7 +61,4 @@ label{
 h1{
     padding: 20px;
     color: #04AA6D;
-}
-.red{
-    color: red;
-}
+} */

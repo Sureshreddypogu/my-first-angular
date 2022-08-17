@@ -1,38 +1,111 @@
-<h1>Registration</h1>
-<form action="">
-    <div>
-        <label for="firstname">First Name : </label>
-        <input type="text" name="firstname" id="num">
-    </div><br>
-    <div>
-        <label for="lastname">Last Name : </label>
-        <input type="text" name="lastname" id="num">
-    </div><br>
-    <div>
-        <label for="password">Password : </label>
-        <input type="password" name="password" id="num">
-    </div><br>
-    <div>
-        <label for="password">Confirm Password : </label>
-        <input type="password" name="password" id="num">
-    </div><br>
-    <div>
-        <label for="firstname">D.O.B : </label>
-        <input type="text" name="firstname" id="num">
-    </div><br>
-    <div>
-        <label for="lastname">Mobile Number : </label>
-        <input type="text" name="lastname" id="num">
-    </div><br>
-    <div>
-        <label for="password">Address : </label>
-        <input type="password" name="password" id="num">
-    </div><br>
-    <div>
-        <label for="password">Pincode : </label>
-        <input type="password" name="password" id="num">
-    </div><br>
-    <button type="submit">Register</button>
-    
 
-</form>
+  <div class="row justify-content-center m-auto">
+    <div class="col-md-6">
+    <div class="card  m-auto">
+        <h1 class="card-header p-2 text-center">Registration Form</h1>
+        <div class="card-body">
+        <form [formGroup]="registrationForm"  >
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label for="fname" class="form-label">First Name : </label>
+                    <input type="text" name="firstname" id="fname" formControlName="fname" class="form-control" [ngClass]="{'is-invalid' : reg.fname.errors && submitted}" pattern="[a-zA-Z'-'\s]*">
+                    <div *ngIf="reg.fname.errors" class="invalid-feedback">
+                    <div *ngIf="reg.fname.errors.required && submitted" [ngClass]="{'text-danger': true}">*First Name is required </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label for="lastname" class="form-label">Last Name : </label>
+                    <input type="text" name="lastname" id="lname" formControlName="lname" class="form-control" [ngClass]="{'is-invalid' : reg.lname.errors && submitted}" pattern="[a-zA-Z'-'\s]*">
+                    <div *ngIf="reg.lname.errors" class="invalid-feedback">
+                    <div *ngIf="reg.lname.errors.required && submitted" [ngClass]="{'text-danger': true}">*Last Name is required </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label for="password" class="form-label">Password : </label>
+                    <input type="password" name="password" id="pwd" formControlName="pwd" class="form-control" [ngClass]="{'is-invalid' : reg.pwd.errors && submitted}">
+                    <div *ngIf="reg.pwd.errors" class="invalid-feedback">
+                    <div *ngIf="reg.pwd.errors.required && submitted" [ngClass]="{'text-danger': true}      ">*Password is required </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label for="password" class="form-label">Confirm Password : </label>
+                        <input type="password" name="password" id="cpwd" formControlName="cpwd" class="form-control" [ngClass]="{'is-invalid' : reg.cpwd.errors && submitted}">
+                        <div *ngIf="reg.cpwd.errors" class="invalid-feedback">
+                        <div *ngIf="reg.cpwd.errors.required && submitted" [ngClass]="{'text-danger': true}">*Confirm Password is required </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <label for="email" class="form-label">Email :</label>
+                          <input type="email" id="birthday" name="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid' : reg.email.errors && submitted}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                          <div *ngIf="reg.email.errors" class="invalid-feedback">
+                          <div *ngIf="reg.email.errors.required && submitted" [ngClass]="{'text-danger': true}">*Email is required</div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          
+                        </div>
+                    </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="birthday" class="form-label">D.O.B :</label>
+                        <input type="date" id="birthday" name="birthday" formControlName="birthday" class="form-control" [ngClass]="{'is-invalid' : reg.birthday.errors && submitted}">
+                        <div *ngIf="reg.birthday.errors" class="invalid-feedback">
+                        <div *ngIf="reg.birthday.errors.required && submitted" [ngClass]="{'text-danger': true}">*Birthday Date is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="phone" class="form-label">Mobile number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="" pattern="[0-9]{10}" required formControlName="phone" class="form-control" [ngClass]="{'is-invalid' : reg.phone.errors && submitted}" maxlength="10">
+                        <div *ngIf="reg.phone.errors" class="invalid-feedback">
+                        <div *ngIf="reg.phone.errors.required && submitted" [ngClass]="{'text-danger': true}">*Mobile Number is required </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                    <label for="address" class="form-label">Address : </label><br>
+                    <textarea type="text"name="message" id="address" rows="" cols="" formControlName="address" class="form-control" [ngClass]="{'is-invalid' : reg.address.errors && submitted}"></textarea>
+                    <div *ngIf="reg.address.errors" class="invalid-feedback">
+                    <div *ngIf="reg.address.errors.required && submitted" [ngClass]="{'text-danger': true}">*Address is required </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label for="pincode" class="form-label">Pincode : </label>
+                            <input type="tel" name="pincode" id="pcode" pattern="[0-9]{6}" maxlength="6" minlength="6" formControlName="pcode" class="form-control" [ngClass]="{'is-invalid' : reg.pcode.errors && submitted}">
+                            <div *ngIf="reg.pcode.errors" class="invalid-feedback">
+                            <div *ngIf="reg.pcode.errors.required && submitted" [ngClass]="{'text-danger': true}">*Pincode is required </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-1 mx-auto">
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Register</button>
+              </div>
+        </form>
+        </div>
+    </div> 
+    </div>
+</div>
