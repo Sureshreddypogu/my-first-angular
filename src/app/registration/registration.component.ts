@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import { RegistrationService } from '../registration.service';
+
 
 @Component({
   selector: 'app-registration',
@@ -15,33 +16,32 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private regist: FormBuilder,
     private router:Router,
-    private registrationService: RegistrationService
+    private registrationService: RegistrationService,
+    
   ) { }
 
   ngOnInit(): void {
     this.registrationForm = this.regist.group({
       fname:['', [Validators.required]],
       lname:['', Validators.required],
-      pwd:['',Validators.required],
+      pwd:['',[Validators.required, Validators.minLength(6)]],
       cpwd:['', Validators.required],
       email:['', Validators.required],
       birthday:['', Validators.required],
       phone:['', Validators.required],
       address:['', Validators.required],
       pcode:['', Validators.required]
-    })
+    });
   }
   get reg(){return this.registrationForm.controls;}
 
   onSubmit(){
     this.submitted=true;
-     console.log(this.registrationForm);
+    console.log(this.registrationForm);
+
     if (this.registrationForm.invalid) {
       return;
     }
-
-    this.router.navigate(['/','login']);
-
     let registerObj = {
       fname: this.registrationForm.value.fname,
       lname: this.registrationForm.value.lname,
@@ -51,10 +51,12 @@ export class RegistrationComponent implements OnInit {
       pcode: this.registrationForm.value.pcode,
     }
       this.registrationService.listofemploees.push(registerObj);
-      console.log(registerObj)
-    // return
+      console.log(registerObj);
+      this.router.navigate(['/','login']);
+    return
   }
 
+  
   
 
 }

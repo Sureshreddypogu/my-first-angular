@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -10,9 +11,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class LoginComponent implements OnInit {
   LoginForm: any= FormGroup;
   submitted: boolean= false;
+  invalidMsg : boolean= false;
   constructor(
     private fb: FormBuilder,
-    private router:Router
+    private router:Router,
+    private http : HttpClient
     ){ }
   
 
@@ -27,7 +30,38 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     // console.log(this.LoginForm);
     this.submitted= true;
-    return;
+    if (this.LoginForm.invalid) {
+      return;
+    }
+    this.invalidMsg=false;
+    this.getValidate().subscribe(d=>{
+      let data: any=[];
+      data =d;
+      data.forEach((elemen:any)=> {
+      console.log(elemen.uname);
+      if (elemen.uname===this.LoginForm.value.usr && elemen.pass===this.LoginForm.value.pwd) {
+          if(elemen.role==0){
+            this.router.navigate(["/studenttest"]);
+          }else if(elemen.role==1){
+            this.router.navigate(["/listofemployees"]);
+          }else{
+            this.router.navigate(["/table"]);
+          }
+          
+      } else {
+        this.invalidMsg=true;
+      }        
+      });
+    })
+    
+  }
+  getValidate() {
+    return this.http.get('./assets/json/cred.json');
+  }
+  
+  getNews(){
+    let api_key="241ba28f7366416c9650417bd67873e0";
+    return this.http.get(`https://newsapi.org/v2/everything?q=tesla&from=2022-07-23&sortBy=publishedAt&apiKey=${api_key}`);
   }
 
 }

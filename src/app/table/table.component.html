@@ -1,11 +1,7 @@
-
-    <div class="container">
-        <div>
-                <div *ngFor="let j of tableForm" class="boxes">
-                        <span>{{j.num}} x {{j.i}}</span>
-                        <span>=</span>
-                        <span>{{j.num*j.i}}</span>
-                </div>
+<div  >
+        <div class="container" *ngFor="let j of tableForm">
+                <span>{{j.num}} x {{j.i}}</span>
+                <span>=</span>
+                <span>{{j.num*j.i}}</span>
         </div>
-    </div>
-    
+</div>    
