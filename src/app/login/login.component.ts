@@ -58,10 +58,5 @@ export class LoginComponent implements OnInit {
   getValidate() {
     return this.http.get('./assets/json/cred.json');
   }
-  
-  getNews(){
-    let api_key="241ba28f7366416c9650417bd67873e0";
-    return this.http.get(`https://newsapi.org/v2/everything?q=tesla&from=2022-07-23&sortBy=publishedAt&apiKey=${api_key}`);
-  }
 
 }

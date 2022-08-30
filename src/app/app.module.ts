@@ -17,6 +17,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LeftsideComponent } from './leftside/leftside.component';
 import { RightsideComponent } from './rightside/rightside.component';
+import { NewsComponent } from './news/news.component';
+import { CalendernewsComponent } from './calendernews/calendernews.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { RightsideComponent } from './rightside/rightside.component';
     HeaderComponent,
     FooterComponent,
     LeftsideComponent,
-    RightsideComponent
+    RightsideComponent,
+    NewsComponent,
+    CalendernewsComponent,
   ],
   imports: [
     BrowserModule,

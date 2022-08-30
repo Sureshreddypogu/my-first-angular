@@ -25,7 +25,7 @@ export class RegistrationComponent implements OnInit {
       fname:['', [Validators.required]],
       lname:['', Validators.required],
       pwd:['',[Validators.required, Validators.minLength(6)]],
-      cpwd:['', Validators.required],
+      cpwd:['', Validators.required,Validators.minLength(6)],
       email:['', Validators.required],
       birthday:['', Validators.required],
       phone:['', Validators.required],
@@ -51,6 +51,10 @@ export class RegistrationComponent implements OnInit {
       pcode: this.registrationForm.value.pcode,
     }
       this.registrationService.listofemploees.push(registerObj);
+      this.registrationService.saveUsrData(this.registrationForm.value).subscribe(res=>{
+        console.log('add:::', res);
+      });
+      
       console.log(registerObj);
       this.router.navigate(['/','login']);
     return
