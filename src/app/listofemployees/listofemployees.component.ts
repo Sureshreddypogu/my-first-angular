@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-listofemployees',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listofemployees.component.css']
 })
 export class ListofemployeesComponent implements OnInit {
-  listofemplie: any;
-  constructor() { }
+  listofemplie:any=[];
+  //registrationService=RegistrationService;
+  constructor(
+    private registrationService:RegistrationService,
+    private router:Router
+    ) { }
 
   ngOnInit(): void {
+    this.listofemplie=this.registrationService.listofemploees;
   }
 
 }

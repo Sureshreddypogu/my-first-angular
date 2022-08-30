@@ -1,9 +1,7 @@
-
-
-<nav class="navbar navbar-light bg-light  p-3 mb-2 " >
+<!-- <nav class="navbar navbar-light bg-light  p-3 mb-2 " >
   <form class="container-fluid d-flex justify-content-center">
     <button class="btn btn-sm btn-outline-success me-2" type="button">
-      <a routerLink="/table" class="text-decoration-none text-black">Table</a>
+      <a routerLink="/table" class="text-decoration-none  text-black">Table</a>
     </button>
     <button class="btn btn-sm btn-outline-success me-2" type="button">
       <a routerLink="/login" class="text-decoration-none text-black">Login</a>
@@ -17,7 +15,20 @@
     <button class="btn btn-sm btn-outline-success me-2" type="button">
       <a routerLink="/calculator" class="text-decoration-none text-black">Calculator</a>
     </button>
+    <button class="btn btn-sm btn-outline-success me-2" type="button">
+      <a routerLink="/listofemployees" class="text-decoration-none text-black">listofemployees</a>
+    </button>
   </form>
-</nav>
+</nav> -->
 
-<router-outlet></router-outlet>
+<app-header [menu]="menus"></app-header>
+
+  <router-outlet></router-outlet>
+  
+<!-- <app-leftside></app-leftside> -->
+
+
+
+<!-- <app-rightside></app-rightside> -->
+
+<app-footer></app-footer>

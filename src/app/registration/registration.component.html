@@ -1,5 +1,5 @@
 
-  <div class="row justify-content-center m-auto">
+  <div class=" container-fluid row justify-content-center m-auto bg-light bg-opacity-75">
     <div class="col-md-6">
     <div class="card  m-auto">
         <h1 class="card-header p-2 text-center">Registration Form</h1>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label for="password" class="form-label">Confirm Password : </label>
+                        <label for="password" class="form-label">Confirm Password : </label>
                         <input type="password" name="password" id="cpwd" formControlName="cpwd" class="form-control" [ngClass]="{'is-invalid' : reg.cpwd.errors && submitted}">
                         <div *ngIf="reg.cpwd.errors" class="invalid-feedback">
                         <div *ngIf="reg.cpwd.errors.required && submitted" [ngClass]="{'text-danger': true}">*Confirm Password is required </div>
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div class="d-grid gap-2 col-1 mx-auto">
-                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Register</button>
+                <button type="submit" class="btn btn-success" (click)="onSubmit()">Register</button>
               </div>
         </form>
         </div>

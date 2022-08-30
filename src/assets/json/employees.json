@@ -1,0 +1,15 @@
+
+[
+    {"id":1,"name":"suresh","username":"sureshr@gmail.com","password":"12345678","mobile":"9652169697","dob":"25-05-2017","pincode":"500067","address":"hyd"},
+
+  {"id":2,"name":"rrr","username":"sureshreddypogu@gmail.com","password":"12345678","mobile":"9652169696","dob":"25-05-2016","pincode":"500066","address":"hyd"},
+
+  {"id":3,"name":"rrr","username":"sureshreddy@gmail.com","password":"12345678","mobile":"9652169696","dob":"25-05-2016","pincode":"500066","address":"hyd"},
+
+
+    {"id":4,"name":"sss","username":"suresh@gmail.com","password":"12345678","mobile":"9652169695","dob":"25-05-2015","pincode":"500065","address":"hyd"},
+
+
+    {"id":5,"name":"ttt","username":"sures@gmail.com","password":"12345678","mobile":"9652169694","dob":"25-05-2014","pincode":"500064","address":"hyd"}
+]
+

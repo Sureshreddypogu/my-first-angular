@@ -1,0 +1,60 @@
+<div class="container-fluid bg-light opacity-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-3 my-3 d-flex justify-content-start">            
+        <input type="date" name="date" class="form-control" max="{{today}}" (change)="searchBydate($event)"/>
+        </div>
+        <!-- <div class="col-sm-2 my-3 d-flex ">
+            <div class="form-floating justify-content-end">
+                <select class="form-select" name="Country" id="floatingSelectGrid"  (change)="sortByCountry($event)" aria-label="Floating label select example" >
+                  <option selected>Select Country</option>
+                  <option value="in">India</option>
+                  <option value="cn">china</option>
+                  <option value="mx">Mexico</option>
+                  <option value="ch">Switzerland</option>
+                  <option value="sk">Srilanka</option>
+                </select>
+                <label for="floatingSelectGrid">Choose Country</label>
+              </div>
+        </div> -->
+    </div>
+    <div>
+        <div class="row gy-4">
+            <div class="col-sm-4"  *ngFor="let news of newsD.articles">
+                <div class="card w-100 h-100">
+                    <img src="{{news.urlToImage}}" class="card-img-top" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{{news.title}}</h5>
+                        <p class="card-text">{{news.content}}
+                        </p>
+                        <a href="{{news.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                    </div>
+                    <article class="text-center bg-dark text-white p-2">
+                        <i>published date </i>{{news.publishedAt}}
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+
+    <div class="row" >
+        <div class="col-4 p-4 m-0" *ngFor="let news of newsD.articles">
+            <div class="card h-100">
+                <img src="{{news.urlToImage}}" alt="" class="img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{news.url}}" target="_blank" class="text-decoration-none text-dark">{{news.title}}</a></h5>
+                    <p class="card-text">{{news.content}}</p>
+                    <a href="{{news.url}}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+                    <span class="text-center bg-dark text-white">
+                        <article class="text-center bg-dark text-white p-2">
+                            <i>published date</i>{{news.publishedAt}}
+                        </article>
+                    </span>
+            </div>
+        </div>
+    </div> -->
+
+
+

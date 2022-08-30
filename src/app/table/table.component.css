@@ -1,8 +1,7 @@
-/* .boxes{ */
-    /* padding: 20px;
-    display:inline-grid;
+/* .tables{
+    display: flex;
+    width: 10%;
     border: 1px solid;
-    margin: 2px;
-    width: 16%;
-    text-align: center; */
-/* } */
+    padding: 10px;
+    margin: 3px;
+} */

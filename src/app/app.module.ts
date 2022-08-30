@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,12 @@ import { JavasComponent } from './javas/javas.component';
 import { ListofemployeesComponent } from './listofemployees/listofemployees.component';
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
 import { ChildCompComponent } from './child-comp/child-comp.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { LeftsideComponent } from './leftside/leftside.component';
+import { RightsideComponent } from './rightside/rightside.component';
+import { NewsComponent } from './news/news.component';
+import { CalendernewsComponent } from './calendernews/calendernews.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +30,19 @@ import { ChildCompComponent } from './child-comp/child-comp.component';
     JavasComponent,
     ListofemployeesComponent,
     ParentCompComponent,
-    ChildCompComponent
+    ChildCompComponent,
+    HeaderComponent,
+    FooterComponent,
+    LeftsideComponent,
+    RightsideComponent,
+    NewsComponent,
+    CalendernewsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [],

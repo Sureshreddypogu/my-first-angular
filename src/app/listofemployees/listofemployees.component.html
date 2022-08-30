@@ -1,12 +1,33 @@
-<p>listofemployees works!</p>
 
+<!-- <div *ngFor="let emp of listofemplie">
+    <div>
+        Name : <p>{{emp.fname}}</p> <p>{{emp.lname}}</p>
+        Birthday : <p>{{emp.birthday}}</p>
+        Mobile Number : <p>{{emp.phone}}</p>
+        Pin Code : <p>{{emp.pcode}}</p>
+    </div>
+</div> -->
 
-
-<table>
-    <tr >
-        <td>Name</td>
-            </tr>
-    <tr *ngFor="let emp of listofemplie">
-<td>{{emp.name}}</td>
-    </tr>
-</table>
+<div class="container-fluid m-auto bg-success text-white bg-opacity-75">
+    <h2 class="text-center p-2">List of Employees</h2><br><br>
+    <table class=" container table table-hover bg-info bg-opacity-75">
+      <thead class="text-white"> 
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>D.O.B</th>
+          <th>Mobile Number</th>
+          <th>Pin Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of listofemplie">
+          <td>{{emp.fname}}</td>
+          <td>{{emp.lname}}</td>
+          <td>{{emp.birthday}}</td>
+          <td>{{emp.phone}}</td>
+          <td>{{emp.pcode}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

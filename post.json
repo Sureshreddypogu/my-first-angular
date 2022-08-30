@@ -1,0 +1,124 @@
+{
+  "usr": [
+    {
+      "fname": "suresh reddypogu",
+      "lname": "reddypogu",
+      "pwd": "sadsaadadad",
+      "cpwd": "sadadaddad",
+      "email": "reddy@gmail.com",
+      "birthday": "2022-08-11",
+      "phone": "9652169697",
+      "address": "kurnool",
+      "pcode": "518000",
+      "id": 1
+    },
+    {
+      "fname": "kiran kumar",
+      "lname": "bitra",
+      "pwd": "fsafsdaffgsfssa",
+      "cpwd": "fasfsafafaf",
+      "email": "kiran@gmail.com",
+      "birthday": "2022-08-18",
+      "phone": "9699696969",
+      "address": "hyd",
+      "pcode": "518000",
+      "id": 2
+    },
+    {
+      "fname": "surya",
+      "lname": "kumar",
+      "pwd": "suteshs",
+      "cpwd": "stretsete",
+      "email": "surya@gmail.com",
+      "birthday": "2022-08-10",
+      "phone": "9652169697",
+      "address": "hyd",
+      "pcode": "518200",
+      "id": 3
+    },
+    {
+      "fname": "suri",
+      "lname": "reddypogu",
+      "pwd": "sufsfafaj",
+      "cpwd": "sfsafafafaf",
+      "email": "suri@gmail.com",
+      "birthday": "2022-08-12",
+      "phone": "9699696969",
+      "address": "kurnool",
+      "pcode": "518200",
+      "id": 4
+    },
+    {
+      "fname": "gug",
+      "lname": "jgjg",
+      "pwd": "tertetterte",
+      "cpwd": "tetretetetet",
+      "email": "sureshreddy@gmail.com",
+      "birthday": "2022-08-17",
+      "phone": "9699696969",
+      "address": "rwrwerwr",
+      "pcode": "518200",
+      "id": 5
+    },
+    {
+      "fname": "kumar",
+      "lname": "yadav",
+      "pwd": "tytryryr",
+      "cpwd": "tryryryryry",
+      "email": "sureshreddy@gmail.com",
+      "birthday": "2022-08-31",
+      "phone": "9699696969",
+      "address": "yrtyryrytrytrty",
+      "pcode": "518200",
+      "id": 6
+    },
+    {
+      "fname": "suresh",
+      "lname": "reddypogu",
+      "pwd": "suresh",
+      "cpwd": "suresh",
+      "email": "sureshreddy@gmail.com",
+      "birthday": "2022-08-26",
+      "phone": "9652169697",
+      "address": "kurnool",
+      "pcode": "518000",
+      "id": 7
+    },
+    {
+      "fname": "ghghfg",
+      "lname": "reddypogu",
+      "pwd": "sdfsfsfdsf",
+      "cpwd": "sdfsfsfsfsf",
+      "email": "reddy@gmail.com",
+      "birthday": "2022-08-20",
+      "phone": "9699696969",
+      "address": "fsdfsfsfs",
+      "pcode": "414255",
+      "id": 8
+    },
+    {
+      "fname": "dfghdfghfdh",
+      "lname": "dfhhdfh",
+      "pwd": "hhdfhhhdh",
+      "cpwd": "hdfhdfhdhfdh",
+      "email": "reddy@gmail.com",
+      "birthday": "2022-08-27",
+      "phone": "9699696969",
+      "address": "hdfhfdhdhd",
+      "pcode": "414255",
+      "id": 9
+    },
+    {
+      "fname": "gdfgdgd",
+      "lname": "gdgdg",
+      "pwd": "hghghghghghgh",
+      "cpwd": "ghghghghghghghghghghghgh",
+      "email": "sureshreddy@gmail.com",
+      "birthday": "2022-08-12",
+      "phone": "9652169697",
+      "address": "dgdgdgdg",
+      "pcode": "518200",
+      "id": 10
+    }
+  ]
+}
